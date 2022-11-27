@@ -4,8 +4,9 @@ on: push
 jobs:
   test_project:
     runs-on: ubuntu-latest
-    run:
-      working-directory: airline
+    defaults:
+      run:
+        working-directory: airline
     steps:
     - uses: actions/checkout@v2.5.0
     - name: Run Django unit tests
